@@ -120,6 +120,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -206,6 +209,7 @@
     <option name="width" value="1378" />
     <option name="height" value="779" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -337,11 +341,11 @@
       <recent name="cn.itcast.web.servlet" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javaDevelopment\basic-web&amp;servlet\day12_html-css-js\web" />
       <recent name="E:\javaDevelopment\basic-web&amp;servlet\day16_cookie&amp;session\web\WEB-INF\lib" />
       <recent name="E:\javaDevelopment\basic-web&amp;servlet\day16_cookie&amp;session\web" />
       <recent name="E:\javaDevelopment\basic-web&amp;servlet\day15_HTTP&amp;response\src\cn\itcast\web\utils" />
       <recent name="E:\javaDevelopment\basic-web&amp;servlet\day15_HTTP&amp;response\web\img" />
-      <recent name="E:\javaDevelopment\basic-web&amp;servlet\day14_request登录案例\web\WEB-INF\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -526,7 +530,7 @@
       <workItem from="1592359679833" duration="332000" />
       <workItem from="1592532670917" duration="1198000" />
       <workItem from="1592636553200" duration="604000" />
-      <workItem from="1593328133105" duration="628000" />
+      <workItem from="1593328133105" duration="1220000" />
     </task>
     <servers />
   </component>
@@ -548,7 +552,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51960000" />
+    <option name="totallyTimeSpent" value="52552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="1" width="1378" height="779" extended-state="0" />
@@ -570,12 +574,12 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32866043" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.91121495" visible="true" weight="0.31259483" />
-      <window_info id="Web" order="2" sideWeight="0.088785045" side_tool="true" visible="true" weight="0.31259483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9110764" visible="true" weight="0.31259483" />
+      <window_info id="Web" order="2" sideWeight="0.08892356" side_tool="true" visible="true" weight="0.31259483" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
