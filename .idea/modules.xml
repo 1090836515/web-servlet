@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day12_html-css-js/day12_html-css-js.iml" filepath="$PROJECT_DIR$/day12_html-css-js/day12_html-css-js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day13_tomcat&amp;servlet/day13_tomcat&amp;servlet.iml" filepath="$PROJECT_DIR$/day13_tomcat&amp;servlet/day13_tomcat&amp;servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day14_HTTP&amp;request/day14_HTTP&amp;request.iml" filepath="$PROJECT_DIR$/day14_HTTP&amp;request/day14_HTTP&amp;request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day14_request登录案例/day14_request登录案例.iml" filepath="$PROJECT_DIR$/day14_request登录案例/day14_request登录案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day15_HTTP&amp;response/day15_HTTP&amp;response.iml" filepath="$PROJECT_DIR$/day15_HTTP&amp;response/day15_HTTP&amp;response.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day16_cookie&amp;session/day16_cookie&amp;session.iml" filepath="$PROJECT_DIR$/day16_cookie&amp;session/day16_cookie&amp;session.iml" />
+    </modules>
+  </component>
+</project>

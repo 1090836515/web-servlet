@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+
+            border: 1px solid red;
+
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+        }
+
+        #div2{
+            width: 100px;
+            height: 100px;
+        }
+
+
+        #div3{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--DOM：
+        1. 概念： Document Object Model 文档对象模型
+        2.将标记语言文档的各个组成部分，封装为对象。可以使用这些对象，对标记语言文档进行CRUD的动态操作
+        3.W3C DOM 标准被分为 3 个不同的部分：
+            * 核心 DOM - 针对任何结构化文档的标准模型
+                * Document：文档对象
+                * Element：元素对象
+                * Attribute：属性对象
+                * Text：文本对象
+                * Comment:注释对象
+                * Node：节点对象，其他5个的父对象
+            * XML DOM - 针对 XML 文档的标准模型
+            * HTML DOM - 针对 HTML 文档的标准模型-->
+<!--核心DOM模型：
+    * Document：文档对象
+        1. 创建(获取)：在html dom模型中可以使用window对象来获取
+            1. window.document
+            2. document
+        2. 方法：
+            1. 获取Element对象：
+                1. getElementById()	： 根据id属性值获取元素对象。id属性值一般唯一
+                2. getElementsByTagName()：根据元素名称获取元素对象们。返回值是一个数组
+                3. getElementsByClassName():根据Class属性值获取元素对象们。返回值是一个数组
+                4. getElementsByName(): 根据name属性值获取元素对象们。返回值是一个数组
+            2. 创建其他DOM对象：
+                createAttribute(name)
+                createComment()//创建注释节点
+                createElement()
+                createTextNode()//创建文本节点
+       3. 属性
+            * Element：元素对象
+                1. 获取/创建：通过document来获取和创建
+                2. 方法：
+                    1. removeAttribute()：删除属性(a标签中的href="javascript:void(0);"表示注销其跳转功能)
+                    2. setAttribute()：设置属性
+            * Node：节点对象，其他5个的父对象
+                * 特点：所有dom对象都可以被认为是一个节点
+                * 方法：
+                    * CRUD dom树：
+                        * appendChild()：向节点的子节点列表的结尾添加新的子节点。
+                        * removeChild()	：删除（并返回）当前节点的指定子节点。
+                        * replaceChild()：用新节点替换一个子节点。
+                * 属性：
+                    * parentNode 返回节点的父节点。-->
+    <a>点我试一试</a>
+    <input type="button" value="设置属性" id="btn_set">
+    <input type="button" value="删除属性" id="btn_remove">
+    <script>
+        //设置属性
+        var btn_set=document.getElementById("btn_set");
+        btn_set.onclick=function () {
+            var element=document.getElementsByTagName("a")[0];
+            element.setAttribute("href","https://www.baidu.com");
+        };
+
+        //删除属性
+        var btn_remove=document.getElementById("btn_remove");
+        btn_remove.onclick=function () {
+            var element=document.getElementsByTagName("a");
+            element.remove("href");
+        }
+    </script>
+
+<div id="div1">
+    <div id="div2">div2</div>
+    div1
+</div>
+<a href="javascript:void(0);" id="del">删除子节点</a>
+<a href="javascript:void(0);" id="add">添加子节点</a>
+<!--<input type="button" id="del" value="删除子节点">-->
+<script>
+    //1.获取超链接
+    var element_a = document.getElementById("del");
+    //2.绑定单击事件
+    element_a.onclick = function () {
+        var div1 = document.getElementById("div1");
+        var div2 = document.getElementById("div2");
+        div1.removeChild(div2);
+    }
+
+    //1.获取超链接
+    var element_add = document.getElementById("add");
+    //2.绑定单击事件
+    element_add.onclick = function () {
+        var div1 = document.getElementById("div1");
+        //给div1添加子节点
+        //创建div节点
+        var div3 = document.createElement("div");
+        div3.setAttribute("id", "div3");
+
+        div1.appendChild(div3);
+    }
+
+
+    /*
+        超链接功能：
+            1.可以被点击：样式
+            2.点击后跳转到href指定的url
+
+        需求：保留1功能，去掉2功能
+        实现：href="javascript:void(0);"
+     */
+
+    var div2 = document.getElementById("div2");
+    var div1 = div2.parentNode;
+    alert(div1);
+
+</script>
+
+
+</body>
+</html>

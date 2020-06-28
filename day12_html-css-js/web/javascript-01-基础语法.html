@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--内部JS,可以出现在任意位置，但有执行顺序-->
+    <script>
+        // 单行注释
+        /*多行
+          注释*/
+
+        //定义number类型
+        var num = 1;
+        var num2 = 1.2;
+        var num3 = NaN;
+
+        //输出到页面上
+        document.write(num + "<br>");
+        document.write(num2 + "<br>");
+        document.write(num3 + "<br>");
+        //定义string类型
+
+        var str = "abc";
+        var str2 = 'edf';
+        document.write(str + "<br>");
+        document.write(str2 + "<br>");
+
+        //定义boolean
+        var flag = true;
+        document.write(flag + "<br>");
+
+        // 定义null,undefined
+        var obj = null;//Object类型
+        var obj2 = undefined;
+        var obj3;//未定义,默认undefined类型
+        document.write(obj + "<br>");
+        document.write(obj2 + "<br>");
+        document.write(obj3 + "<br>");
+
+        // 控制语句
+        /*var a = 1;
+        switch (a) {
+            case 1:
+                alert("number");
+            case "abc":
+                alert("String");
+            case undefined:
+                alert("undefined");
+            case null:
+                alert("null");
+        }*/
+        var sum=0;
+        for(var i=1;i<5;i++){
+            sum+=i;
+        }
+        document.write(sum);
+
+        // 求任意个数的和的函数定义
+        function add() {
+            var sum=0;
+            for(var i=0;i<arguments.length;i++){
+                sum+=arguments[i];
+            }
+            return sum;
+        }
+        var sum=add(1,2,3,4);
+        alert(sum);
+    </script>
+
+    <script>
+
+        /*Date：日期对象
+                1. 创建：
+                        var date = new Date();
+                2. 方法：
+                    toLocaleString()：返回当前date对象对应的时间本地字符串格式
+                    getTime():获取毫秒值。返回当前如期对象描述的时间到1970年1月1日零点的毫秒值差*/
+        var date=new Date();
+        document.write(date+"<br>");
+        document.write(date.toLocaleString()+"<br>");
+        document.write(date.getTime()+"<br>");
+
+        // 正则表达式的创建
+        //1
+        var reg=new RegExp("^\\w{6,12}$");
+        //2
+        var reg2=/^\w{6,12}$/;
+        var username="zhangsan";
+        //验证
+        var flag=reg2.test(username);//true
+        alert(flag);
+
+        /*
+          Global
+               1. 特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。  方法名();
+               2. 方法：
+                   encodeURI():url编码
+                   decodeURI():url解码
+
+                   encodeURIComponent():url编码,编码的字符更多
+                   decodeURIComponent():url解码
+
+                   parseInt():将字符串转为数字
+                       * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+                   isNaN():判断一个值是否是NaN
+                       * NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+
+                   eval():讲 JavaScript 字符串，并把它作为脚本代码来执行。
+               3. URL编码
+                  传智播客 =  %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+        *
+        */
+        var str = "http://www.baidu.com?wd=传智播客";
+        var encode = encodeURI(str);
+        document.write(encode +"<br>");//%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+        var s = decodeURI(encode);
+        document.write(s +"<br>");//传智播客
+
+
+        var str1 = "http://www.baidu.com?wd=传智播客";
+        var encode1 = encodeURIComponent(str1);
+        document.write(encode1 +"<br>");//%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+        var s1 = decodeURIComponent(encode);
+        document.write(s1 +"<br>");//传智播客
+
+
+        var str = "a234abc";
+        var number = parseInt(str);
+        //alert(number + 1);//235
+
+        var a = NaN;
+
+        document.write(a == NaN);//false
+        document.write(isNaN(a));//true
+
+        var jscode = "alert(123)";
+        eval(jscode);//解析js
+    </script>
+
+    <!--外部JS-->
+    <script src="js/a.js"></script>
+</head>
+<body>
+<!--JavaScript是一门客户端脚本语言
+        * 运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎
+        * 脚本语言：不需要编译，直接就可以被浏览器解析执行了
+        * 可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些动态的效果，增强用户的体验。-->
+
+<!--数据类型：
+        1. 原始数据类型(基本数据类型)：
+            1. number：数字。 整数/小数/NaN(not a number 一个不是数字的数字类型)
+            2. string：字符串。 字符串  "abc" "a" 'abc'
+            3. boolean: true和false
+            4. null：一个对象为空的占位符
+            5. undefined：未定义。如果一个变量没有给初始化值，则会被默认赋值为undefined
+        2. 引用数据类型：对象-->
+<!--变量
+        * 变量：一小块存储数据的内存空间
+        * Java语言是强类型语言，而JavaScript是弱类型语言。
+        * 强类型：在开辟变量存储空间时，定义了空间将来存储的数据的数据类型。只能存储固定类型的数据
+        * 弱类型：在开辟变量存储空间时，不定义空间将来的存储数据类型，可以存放任意类型的数据。
+        * 语法：
+        * var 变量名 = 初始化值;
+        * typeof运算符：获取变量的类型。
+        * 注：null运算后得到的是object-->
+
+<!--* 其他类型转number：
+        * string转number：按照字面值转换。如果字面值不是数字，则转为NaN（不是数字的数字）
+        * boolean转number：true转为1，false转为0
+    * 比较方式：
+                  1. 类型相同：直接比较
+                      * 字符串：按照字典顺序比较。按位逐一比较，直到得出大小为止。
+                  2. 类型不同：先进行类型转换，再比较
+                      * ===：全等于。在比较之前，先判断类型，如果类型不一样，则直接返回false
+    * 其他类型转boolean：
+                   1. number：0或NaN为假，其他为真
+                   2. string：除了空字符串("")，其他都是true
+                   3. null&undefined:都是false
+                   4. 对象：所有对象都为true-->
+
+<!--JS特殊语法：
+        1. 语句以;结尾，如果一行只有一条语句则 ;可以省略 (不建议)
+        2. 变量的定义使用var关键字，也可以不使用
+            * 用： 定义的变量是局部变量
+            * 不用：定义的变量是全局变量(不建议)-->
+
+<!--基本对象：
+    1. Function：函数(方法)对象
+            1. 创建：
+            1. var fun = new Function(形式参数列表,方法体);  //忘掉吧
+            2.function 方法名称(形式参数列表){
+                方法体
+            }
+            3.var 方法名 = function(形式参数列表){
+                方法体
+            }
+            2. 方法：
+            3. 属性：
+                length:代表形参的个数
+            4. 特点：
+                1. 方法定义是，形参的类型不用写,返回值类型也不写。
+                2. 方法是一个对象，如果定义名称相同的方法，会覆盖
+                3. 在JS中，方法的调用只与方法的名称有关，和参数列表无关
+                4. 在方法声明中有一个隐藏的内置对象（数组），arguments,封装所有的实际参数
+            5. 调用：
+                方法名称(实际参数列表);
+      2. Array:数组对象
+                1. 创建：
+                    1. var arr = new Array(元素列表);
+                    2. var arr = new Array(默认长度);
+                    3. var arr = [元素列表];
+                2. 方法
+                    join(参数):将数组中的元素按照指定的分隔符拼接为字符串
+                    push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+                3. 属性
+                    length:数组的长度
+                4. 特点：
+                    1. JS中，数组元素的类型可变的。
+                    2. JS中，数组长度可变的。
+      3. RegExp：正则表达式对象
+				1. 正则表达式：定义字符串的组成规则。
+					1. 单个字符:[]
+						如： [a] [ab] [a-zA-Z0-9_]
+						* 特殊符号代表特殊含义的单个字符:
+							\w:单个单词字符[a-zA-Z0-9_]
+							\d  匹配一个数字字符，等价于[0-9]
+                            \D  匹配一个非数字字符，等价于[^0-9]
+                            \s  匹配任何空白字符，包括空格、制表符、换页符等，等价于 [ \f\n\r\t\v]
+                            [0-9]{6}  匹配连续6个0-9之间的数字
+					2. 量词符号：
+						?：表示出现0次或1次
+						*：表示出现0次或多次
+						+：出现1次或多次
+						{m,n}:表示 m<= 数量 <= n
+							* m如果缺省： {,n}:最多n次
+							* n如果缺省：{m,} 最少m次
+					3. 开始结束符号
+						* ^:开始
+						* $:结束
+				2. 正则对象：
+					1. 创建
+						1. var reg = new RegExp("正则表达式");
+						2. var reg = /正则表达式/;
+					2. 方法
+						1. test(参数):验证指定的字符串是否符合正则定义的规范-->
+
+
+
+
+
+
+</body>
+</html>

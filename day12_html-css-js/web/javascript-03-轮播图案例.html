@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="image/banner_1.jpg" width="100%" id="img">
+    <script>
+        var number=0;
+        function fun() {
+           number++;
+           if(number>3){
+               number=1;
+           }
+           var img=document.getElementById("img");
+           img.src="image/banner_"+number+".jpg";
+        }
+        setInterval(fun,3000);
+    </script>
+</body>
+</html>

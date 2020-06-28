@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px solid red;
+            width: 100px;
+        }
+        .div1{
+            width: 200px;
+            height: 200px;
+            /*内边距*/
+            padding: 50px;
+            /*box-sizing: border-box;  设置盒子的属性，让width和height就是最终盒子的大小*/
+            box-sizing: border-box;
+        }
+        .div2{
+            width: 50px;
+            height: 50px;
+            /*外边距*/
+            /*margin: 50px;*/
+        }
+        /*让三个div在一行展示*/
+        .div3{
+            float: left;
+        }
+        .div4{
+            float: left;
+        }
+        .div5{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <!--5. 盒子模型：控制布局
+            * margin：外边距
+            * padding：内边距
+            * 默认情况下内边距会影响整个盒子的大小
+            * box-sizing: border-box;  设置盒子的属性，让width和height就是最终盒子的大小
+            * float：浮动
+            * left
+            * right-->
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+
+    <div class="div3">aaa</div>
+    <div class="div4">bbb</div>
+    <div class="div5">ccc</div>
+</body>
+</html>
